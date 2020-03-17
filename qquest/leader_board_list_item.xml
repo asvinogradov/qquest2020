@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="70dp"
+    tools:background="@drawable/background_gradient_dark">
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="104dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:textColor="@color/secondary_text"
+        android:textSize="52sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="000" />
+
+    <ImageView
+        android:id="@+id/userAnimalImg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/position"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_img_mixed" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="start|center_vertical"
+        android:lineSpacingExtra="5sp"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userAnimalImg"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Xpanuhcel" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="start|center_vertical"
+        android:lineSpacingExtra="4sp"
+        android:textColor="@color/text_spec_gray_1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userAnimalImg"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="1 230 очков" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

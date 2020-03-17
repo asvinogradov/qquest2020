@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginBottom="4dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    tools:background="@drawable/background_gradient_dark">
+
+    <ImageView
+        android:id="@+id/levelImage"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/level_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="16:7"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/placeholder" />
+
+    <ImageView
+        android:id="@+id/lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/lock_image"
+        android:src="@drawable/ic_levels_lock"
+        app:layout_constraintBottom_toBottomOf="@id/levelImage"
+        app:layout_constraintEnd_toEndOf="@id/levelImage"
+        app:layout_constraintStart_toStartOf="@id/levelImage"
+        app:layout_constraintTop_toTopOf="@id/levelImage" />
+
+    <TextView
+        android:id="@+id/levelName"
+        style="@style/TextHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/levelImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Подвал ЦВТ" />
+
+    <TextView
+        android:id="@+id/levelStatus"
+        style="@style/TextDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondary_text"
+        app:layout_constraintEnd_toEndOf="@id/levelName"
+        app:layout_constraintStart_toStartOf="@id/levelName"
+        app:layout_constraintTop_toBottomOf="@id/levelName"
+        tools:text="Пройден" />
+</androidx.constraintlayout.widget.ConstraintLayout>
